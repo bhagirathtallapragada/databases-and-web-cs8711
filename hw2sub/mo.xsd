@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:annotation>   
+    <xsd:documentation xml:lang="en">    
+      Mail order schema CS8711   
+    </xsd:documentation>  
+</xsd:annotation>
+
+<xsd:element name="mo" type="MailOrderType"/> 
+
+<xsd:complexType name="MailOrderType">
+  <xsd:sequence>
+    <xsd:element name="customers" type="CustomersType" />
+    <xsd:element name="employees" type="EmployeeType"/>
+    <xsd:element name="parts" type="PartsType"/>
+    <xsd:element name="orders" type="OrdersType"/>
+  </xsd:sequence>
+  <xsd:attribute name="orderDate" type="xsd:date"/>
+</xsd:complexType>
+
+<xsd:complexType name="CustomersType">
+  <xsd:sequence>
+    <xsd:element name="customer" type="CustType" minOccurs="0" maxOccurs="unbounded"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="CustType">
+  <xsd:sequence>
+    <xsd:element name="cname" type="xsd:string"/>
+    <xsd:element name="street" type="xsd:string"/>
+    <xsd:element name="city" type="xsd:string"/>
+    <xsd:element name="zip" type="zip1"/>
+    <xsd:element name="phone" type="phone1"/>
+  </xsd:sequence>
+  <xsd:attribute name="cno" type="cno1" /> <!--fixed="US"/> -->
+</xsd:complexType>
+
+<xsd:simpleType name="cno1">
+  <xsd:restriction base="xsd:integer">   
+    <xsd:minInclusive value="1000"/>     
+    <xsd:maxInclusive value="9999"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="phone1">
+  <xsd:restriction base="xsd:string">   
+      <xsd:pattern value="\d{3}-\d{3}-\d{4}"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="EmployeeType">
+  <xsd:sequence>
+    <xsd:element name="employee" type="EmpType" maxOccurs="unbounded" minOccurs="0"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="EmpType">
+  <xsd:sequence>
+    <xsd:element name="ename" type="xsd:string"/>
+    <xsd:element name="city" type="xsd:string"/>
+    <xsd:element name="zip" type="zip1"/>
+    <xsd:element name="hdate" type="xsd:date"/>
+  </xsd:sequence>
+  <xsd:attribute name="eno" type="eno1" />
+</xsd:complexType>
+
+<xsd:simpleType name="eno1">
+  <xsd:restriction base="xsd:integer">     
+    <xsd:minInclusive value="1000"/>     
+    <xsd:maxInclusive value="9999"/>   
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="zip1">
+  <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{5}|\d{5}-\d{4}"/>
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="price1">
+  <xsd:restriction base="xsd:decimal">
+    <xsd:fractionDigits value="2" />
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="PartsType">
+  <xsd:sequence>
+    <xsd:element name="part" type="PartType" maxOccurs="unbounded" minOccurs="0" />
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="PartType">
+  <xsd:sequence>
+    <xsd:element name="pname" type="xsd:string"/>
+    <xsd:element name="qoh" type="xsd:positiveInteger"/>
+    <xsd:element name="price" type="price1"/>
+    <xsd:element name="level" type="xsd:positiveInteger"/>
+  </xsd:sequence>
+  <xsd:attribute name="pno" type="pno1" /> <!--fixed="US"/> -->
+</xsd:complexType>
+
+<xsd:simpleType name="pno1">
+  <xsd:restriction base="xsd:integer">     
+    <xsd:minInclusive value="10000"/>     
+    <xsd:maxInclusive value="99999"/>   
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="OrdersType">
+  <xsd:sequence>
+    <xsd:element name="order" type="OrdType" maxOccurs="unbounded" minOccurs="0"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="OrdType">
+  <xsd:sequence>
+    <xsd:element name="receivedDate" type="xsd:date"/>
+    <xsd:element name="shippedDate" type="xsd:date" minOccurs="0"/>
+    <xsd:element name="items" type="ItemsType"/>
+  </xsd:sequence>
+  <xsd:attribute name="ono" type="ono1" /> <!--fixed="US"/> -->
+  <xsd:attribute name="takenBy" type="eno1" /> <!--fixed="US"/> -->
+  <xsd:attribute name="customer" type="cno1" /> <!--fixed="US"/> -->
+</xsd:complexType>
+
+<xsd:simpleType name="ono1">
+  <xsd:restriction base="xsd:integer">     
+    <xsd:minInclusive value="1000"/>     
+    <xsd:maxInclusive value="9999"/>   
+  </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="ItemsType">
+  <xsd:sequence>
+    <xsd:element name="item" type="ItType" maxOccurs="unbounded" minOccurs="1"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="ItType">
+  <xsd:sequence>
+    <xsd:element name="partNumber" type="pno1"/>
+    <xsd:element name="quantity" type="xsd:positiveInteger"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+</xsd:schema> 
