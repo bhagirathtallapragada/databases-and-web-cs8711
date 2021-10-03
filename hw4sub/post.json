@@ -1,0 +1,48 @@
+{ "posts": [
+    { "postID": 1,
+      "postDate": "2003-01-11",
+      "poster": "a@abc.com",
+      "subject": "Welcome",
+      "content": "Welcome to the bulletin board",
+      "followup": [
+        { "postID": 2,
+          "postDate": "2003-01-12",
+          "poster": "b@abc.com",
+          "subject": "Posting 2",
+          "content": "This is posting 2",
+          "followup": [
+            { "postID": 7,
+              "postDate": "2003-01-11",
+              "poster": "a@abc.com",
+              "subject": "Posting 7",
+              "content": "This is posting 7",
+              "followup": []
+            },
+            { "postID": 8,
+              "postDate": "2003-01-11",
+              "poster": "a@abc.com",
+              "subject": "Posting 8",
+              "content": "This is posting 8",
+              "followup": [
+                { "postID": 9,
+                  "postDate": "2003-01-19",
+                  "poster": "a@abc.com",
+                  "subject": "Posting 9",
+                  "content": "This is posting 9",
+                  "followup": []
+                }
+              ]
+            }
+          ]
+        },
+        { "postID": 3,
+          "postDate": "2003-01-13",
+          "poster": "c@abc.com",
+          "subject": "Posting 3",
+          "content": "This is posting 3",
+          "followup": []
+        }
+      ]
+    }
+  ]
+}

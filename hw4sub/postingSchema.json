@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "definitions": {
+            "posts": {
+                "type": "array",
+                "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                    "postID": {
+                        "type": "integer"
+                    },
+                    "postDate": {
+                        "type": "string"
+                    },
+                    "poster": {
+                        "type": "string"
+                    },
+                    "subject": {
+                        "type": "string"
+                    },
+                    "content": {
+                        "type": "string"
+                    },
+                    "followup": {
+                        "type": "array",
+                        "items": {"$ref" : "#/definitions/posts"}
+                    }
+                    }
+                }
+            ]
+            }
+        }
+    }
+}

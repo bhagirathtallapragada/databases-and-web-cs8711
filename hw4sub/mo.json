@@ -1,0 +1,238 @@
+{
+   "CUSTOMERS": [
+      {
+         "CNO": 1111,
+         "CNAME": "Charles",
+         "STREET": "123 Main St.",
+         "CITY": "Wichita",
+         "ZIP": 67226,
+         "PHONE": "316-636-5555"
+      },
+      {
+         "CNO": 2222,
+         "CNAME": "Bertram",
+         "STREET": "237 Ash Avenue",
+         "CITY": "Wichita",
+         "ZIP": 67226,
+         "PHONE": "316-689-5555"
+      },
+      {
+         "CNO": 3333,
+         "CNAME": "Barbara",
+         "STREET": "111 Inwood St.",
+         "CITY": "Fort Dodge",
+         "ZIP": 60606,
+         "PHONE": "316-111-1234"
+      }
+   ],
+   "EMPLOYEES": [
+      {
+         "ENO": 1000,
+         "ENAME": "Peter",
+         "CITY": "Wichita",
+         "ZIP": 67226,
+         "HDATE": "1995-12-12"
+      },
+      {
+         "ENO": 1001,
+         "ENAME": "Smith",
+         "CITY": "Fort Dodge",
+         "ZIP": 60606,
+         "HDATE": "1992-01-01"
+      },
+      {
+         "ENO": 1002,
+         "ENAME": "Brown",
+         "CITY": "Kansas City",
+         "ZIP": 50302,
+         "HDATE": "1994-09-01"
+      },
+      {
+         "ENO": 1003,
+         "ENAME": "John",
+         "CITY": "St Louis",
+         "ZIP": 64875,
+         "HDATE": "1995-12-12"
+      }
+   ],
+   "PARTS": [
+      {
+         "PNO": 10506,
+         "PNAME": "Land Before Time I",
+         "QOH": 200,
+         "PRICE": 19.99,
+         "OLEVEL": 20
+      },
+      {
+         "PNO": 10507,
+         "PNAME": "Land Before Time II",
+         "QOH": 156,
+         "PRICE": 19.99,
+         "OLEVEL": 20
+      },
+      {
+         "PNO": 10508,
+         "PNAME": "Land Before Time III",
+         "QOH": 190,
+         "PRICE": 19.99,
+         "OLEVEL": 20
+      },
+      {
+         "PNO": 10509,
+         "PNAME": "Land Before Time IV",
+         "QOH": 60,
+         "PRICE": 19.99,
+         "OLEVEL": 20
+      },
+      {
+         "PNO": 10601,
+         "PNAME": "Sleeping Beauty",
+         "QOH": 300,
+         "PRICE": 24.99,
+         "OLEVEL": 20
+      },
+      {
+         "PNO": 10701,
+         "PNAME": "When Harry Met Sally",
+         "QOH": 120,
+         "PRICE": 19.99,
+         "OLEVEL": 30
+      },
+      {
+         "PNO": 10800,
+         "PNAME": "Dirty Harry",
+         "QOH": 140,
+         "PRICE": 14.99,
+         "OLEVEL": 30
+      },
+      {
+         "PNO": 10900,
+         "PNAME": "Dr. Zhivago",
+         "QOH": 100,
+	 "PRICE": 24.99,
+	 "OLEVEL": 30
+      }
+   ],
+   "ORDERS": [
+      {
+         "ONO": 1020,
+         "TAKENBY": 1000,
+         "CUSTOMER": 1111,
+         "RECEIVEDDATE": "1994-12-10",
+         "SHIPPEDDATE": "1994-12-12",
+         "ITEMS": [
+            {
+               "PARTNUMBER": 10506,
+               "QUANTITY": 1
+            },
+            {
+               "PARTNUMBER": 10507,
+               "QUANTITY": 1
+            },
+            {
+               "PARTNUMBER": 10508,
+               "QUANTITY": 2
+            },
+            {
+               "PARTNUMBER": 10509,
+               "QUANTITY": 3
+            }
+         ]
+      },
+      {
+         "ONO": 1021,
+         "TAKENBY": 1000,
+         "CUSTOMER": 1111,
+         "RECEIVEDDATE": "1995-01-12",
+         "SHIPPEDDATE": "1995-01-15",
+         "ITEMS": [
+            {
+               "PARTNUMBER": 10601,
+               "QUANTITY": 4
+            }
+         ]
+      },
+      {
+         "ONO": 1022,
+         "TAKENBY": 1001,
+         "CUSTOMER": 2222,
+         "RECEIVEDDATE": "1995-02-13",
+         "SHIPPEDDATE": "1995-02-20",
+         "ITEMS": [
+            {
+               "PARTNUMBER": 10601,
+               "QUANTITY": 1
+            },
+            {
+               "PARTNUMBER": 10701,
+               "QUANTITY": 1
+            }
+         ]
+      },
+      {
+         "ONO": 1023,
+         "TAKENBY": 1000,
+         "CUSTOMER": 3333,
+         "RECEIVEDDATE": "1997-06-20",
+         "ITEMS": [
+            {
+               "PARTNUMBER": 10800,
+               "QUANTITY": 1
+            },
+            {
+               "PARTNUMBER": 10900,
+               "QUANTITY": 1
+            }
+         ]
+      },
+      {
+         "ONO": 1025,
+         "TAKENBY": 1002,
+         "CUSTOMER": 3333,
+         "RECEIVEDDATE": "1997-06-20",
+         "ITEMS": [
+            {
+               "PARTNUMBER": 10800,
+               "QUANTITY": 1
+            },
+            {
+               "PARTNUMBER": 10900,
+               "QUANTITY": 1
+            }
+         ]
+      },
+      {
+         "ONO": 1024,
+         "TAKENBY": 1002,
+         "CUSTOMER": 2222,
+         "RECEIVEDDATE": "2014-12-10",
+         "SHIPPEDDATE": "2014-12-12",
+         "ITEMS": [
+            {
+               "PARTNUMBER": 10506,
+               "QUANTITY": 1
+            },
+            {
+               "PARTNUMBER": 10507,
+               "QUANTITY": 1
+            },
+            {
+               "PARTNUMBER": 10508,
+               "QUANTITY": 2
+            },
+            {
+               "PARTNUMBER": 10509,
+               "QUANTITY": 3
+            },
+            {
+               "PARTNUMBER": 10701,
+               "QUANTITY": 3
+            },
+            {
+               "PARTNUMBER": 10800,
+               "QUANTITY": 3
+            }
+         ]
+      }
+   ]
+}

@@ -1,0 +1,89 @@
+{
+    "Books": [
+       {
+          "ISBN": "ISBN-0-13-713526-2",
+          "Price": "85",
+          "Edition": "3rd",
+          "Title": "A First Course in Database Systems",
+          "Authors": [
+             {
+                "First_Name": "Jeffrey",
+                "Last_Name": "Ullman"
+             },
+             {
+                "First_Name": "Jennifer",
+                "Last_Name": "Widom"
+             }
+          ]
+       },
+       {
+          "ISBN": "ISBN-0-13-815504-6",
+          "Price": "100",
+          "Title": "Database Systems: The Complete Book",
+          "Authors": [
+             {
+                "First_Name": "Hector",
+                "Last_Name": "Garcia-Molina"
+             },
+             {
+                "First_Name": "Jeffrey",
+                "Last_Name": "Ullman"
+             },
+             {
+                "First_Name": "Jennifer",
+                "Last_Name": "Widom"
+             }
+          ],
+          "Remark": "Buy this book bundled with \"A First Course\" - a great deal!"
+       },
+       {
+          "ISBN": "ISBN-0-11-222222-3",
+          "Price": "50",
+          "Title": "Hector and Jeff's Database Hints",
+          "Authors": [
+             {
+                "First_Name": "Jeffrey",
+                "Last_Name": "Ullman"
+             },
+             {
+                "First_Name": "Hector",
+                "Last_Name": "Garcia-Molina"
+             }
+          ],
+          "Remark": "An indispensible companion to your textbook"
+       },
+       {
+          "ISBN": "ISBN-9-88-777777-6",
+          "Price": "25",
+          "Title": "Jennifer's Economical Database Hints",
+          "Authors": [
+             {
+                "First_Name": "Jennifer",
+                "Last_Name": "Widom"
+             }
+          ]
+       }
+    ],
+    "Magazines": [
+       {
+          "Month": "January",
+          "Year": "2009",
+          "Title": "National Geographic"
+       },
+       {
+          "Month": "February",
+          "Year": "2009",
+          "Title": "National Geographic"
+       },
+       {
+          "Month": "February",
+          "Year": "2009",
+          "Title": "Newsweek"
+       },
+       {
+          "Month": "March",
+          "Year": "2009",
+          "Title": "Hector and Jeff's Database Hints"
+       }
+    ]
+ }
