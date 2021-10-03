@@ -1,0 +1,1 @@
+match (d:Department)<-[r:controlled_by]-(p), (e:Employee) where p.Location='Stafford' and e.ssn=d.mgrssn return distinct p.name as project_name, p.number as project_num, p.Location as project_location, d.number as controlling_dept_number, e.lname as lastname
