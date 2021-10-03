@@ -1,0 +1,86 @@
+{
+  "id": "1",
+  "name": "senate",
+  "caption": "CS Department Senator e-Vote",
+  "backendURL": "http://localhost:5000/senate/",
+  "backendHost": "localhost",
+  "backendPort": "5000",
+  "mysqlUserID": "qbe",
+  "mysqlPWD": "q123",
+  "mysqlDB": "qbe",
+  "elements": [
+    {
+      "etype": "textbox",
+      "ename": "vid",
+      "datatype": "integer",
+      "key": "key",
+      "caption": "Random Number (1 to 100000):",
+      "size": "8",
+      "maxlength": "8",
+      "required": "true"
+    },
+    {
+      "etype": "textbox",
+      "ename": "vname",
+      "datatype": "string",
+      "caption": "Your Name:",
+      "size": "20",
+      "maxlength": "30",
+      "required": "false"
+    },
+    {
+      "etype": "radiobutton",
+      "ename": "rankk",
+      "datatype": "string",
+      "caption": "Rank:",
+      "group": [
+        {
+          "value": "lecturer",
+          "caption": "Lecturer"
+        },
+        {
+          "value": "asstprof",
+          "caption": "Assistant Professor"
+        },
+        {
+          "value": "assocprof",
+          "caption": "Associate Professor"
+        },
+        {
+          "value": "prof",
+          "caption": "Professor"
+        }
+      ]
+    },
+    {
+      "etype": "checkbox",
+      "ename": "candidate",
+      "datatype": "string",
+      "caption": "Vote for at most 3:",
+      "required": "false",
+      "group": [
+        {
+          "value": "ashwin",
+          "caption": "Ashwin Ashok"
+        },
+        {
+          "value": "cai",
+          "caption": "Zhipeng Cai"
+        },
+        {
+          "value": "cao",
+          "caption": "Xiaojun Cao"
+        },
+        {
+          "value": "alex",
+          "caption": "Alex Zelikovsky"
+        }
+      ]
+    },
+    {
+      "etype": "submit",
+      "ename": "submit",
+      "caption": "VOTE"
+    }
+  ]
+}
