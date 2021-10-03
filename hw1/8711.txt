@@ -1,0 +1,18 @@
+use /mnt/ to access the c and d drives using the linux subsystem
+
+
+
+authors:
+	id
+	first_name
+	last_name
+	photo
+	
+books:
+	id
+	title
+	isbn
+	
+book_author:
+	book_id
+	author_id

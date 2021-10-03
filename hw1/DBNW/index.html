@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QBE Implementation</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="connect.js"></script>
+    </head>
+    <body>
+        <div><p>QBE</p>
+
+            <p>MySQL</p>
+
+            <form action="javascript:buttonClick()" method="GET" id="login-form">
+              
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" placeholder="Enter Username" id="uname" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" id="psw" required>
+                  
+                  <label for="dbname"><b>Database</b></label>
+                  <input type="text" placeholder="Database name" id="dbname" required>
+
+                  <button type="submit" id="login" >Go</button>
+                </div>
+              </form>
+            </div>    
+        <div id="abc"><p>TABLES</p> 
+            <div id="databasetables">
+              
+            </div>
+        </div>
+        <div><p>QBE INTERFACE</p> 
+            <div id="qbe">
+            <div id="runq"></div>
+            </div>
+        </div>
+        <p>QUERY RESULTS</p>
+    </body>
+</html>
